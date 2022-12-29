@@ -1,10 +1,10 @@
 import re
 
-def splitbins(filename):
+def splitbins_intermediate(filename):
 
     #filename="bin2.txt"
     print(filename)
-    filename2="model2.dat"
+    filename2="model3.dat"
 
 
     f = open(str(filename))
@@ -14,10 +14,10 @@ def splitbins(filename):
 
     f = open(filename2, 'w')
     for line in lines:
-        f.write(line[1:])
+        f.write(line[0:])
     f.close()
 
-    with open('model2.dat', 'r') as f:
+    with open('model3.dat', 'r') as f:
         data = f.read()
 
 #    if __name__=="__main__":
