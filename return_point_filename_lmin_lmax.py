@@ -3,7 +3,7 @@ from split_bins_intermediate import splitbins_intermediate as splitbins_intermed
 
 def return_point_filename_lmin_lmax(filename):
     single_splits = splitbins_intermediate(filename)
-    new_dic = {filename: {'length': single_splits.get('length'), 'width': single_splits.get('width')}}
+    new_dic = {'point_filename':filename,'length': single_splits.get('length'), 'width': single_splits.get('width')}
 
     return new_dic
 

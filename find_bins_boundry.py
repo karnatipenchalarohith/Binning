@@ -75,6 +75,7 @@ binned_parameters=[]
 binned_all_parameters=[]
 
 all_dict_append=[]
+all_dict_append2=[]
 
 for i in range(number_of_bins):
     binname = "bin" + str(i + 1) + ".txt"
@@ -82,11 +83,15 @@ for i in range(number_of_bins):
     single_splits = splitbins(binname)
     all_splits.append(single_splits)
     lmin_lmax_list=remove_dict_except(single_splits)
+    new_df2={'binname':binname}
+    new_df2.update(lmin_lmax_list)
     new_df={binname:lmin_lmax_list}
     all_dict_append.append(new_df)
+    all_dict_append2.append(new_df2)
 
 print(single_splits)
 print(lmin_lmax_list)
 print(all_dict_append)
 
+print(all_dict_append2)
 

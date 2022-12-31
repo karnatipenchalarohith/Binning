@@ -12,7 +12,7 @@ def remove_dict_except(df):
         if item=='lmin':
             lmin_value = df['lmin']
         if item=='lmax':
-            lmax_value = df['lmin']
+            lmax_value = df['lmax']
         if item=='wmin':
             wmin_value = df['wmin']
         if item=='wmax':
@@ -24,6 +24,8 @@ def remove_dict_except(df):
     df['lmax'] = lmax_value
     df['wmin'] = wmin_value
     df['wmax'] = wmax_value
+
+
 
 
     return df
