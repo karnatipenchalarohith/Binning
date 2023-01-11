@@ -3,13 +3,13 @@ import re
 def splitbins_intermediate(filename):
 
     #filename="bin2.txt"
-    print(filename)
+#    print(filename)
     filename2="model3.dat"
 
 
     f = open(str(filename))
     lines = f.readlines()
-    print(lines)
+    #print(lines)
     f.close()
 
     f = open(filename2, 'w')

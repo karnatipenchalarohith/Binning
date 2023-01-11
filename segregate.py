@@ -127,4 +127,4 @@ def segregate(df):
 
 
     print(sorted(binned_items))
-    return (sorted(binned_items))
+    return (binned_items)

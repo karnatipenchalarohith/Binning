@@ -88,7 +88,7 @@ def combine_modified_into_one(l):
 #    print(single_split_file2)
     print(new)
 
-    combined_file_name="Width_" + str(round(new['width']*1e6,2)) + "_length_" + str(round(new['length']*1e6,2)) + "_after_bins_joined.txt"
+    combined_file_name="ZZ_Width_" + str(round(new['width']*1e6,2)) + "_length_" + str(round(new['length']*1e6,2)) + "_after_bins_joined.txt"
 
     with open(combined_file_name, "w") as f:
         count = 0

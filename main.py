@@ -15,7 +15,11 @@ from check_values_bins import check_bins_values as check_bins_values
 from bins_analyse import bins_analyse as bins_analyse
 from bins_same_length_width import bins_same_length_width as bins_same_length_width
 from combine_modified_into_one import combine_modified_into_one as combine_modified_into_one
-
+from findInputBinsLminLmaxWminWmax import findInputBinsLminLmaxWminWmax as findInputBinsLminLmaxWminWmax
+from findPointModelCardsLengthWidth import findPointModelCardsLengthWidth as findPointModelCardsLengthWidth
+from RebinMatchingBinsToPointModelCard import RebinMatchingBinsToPointModelCard as RebinMatchingBinsToPointModelCard
+from RebinPointModelToBinnedEquation import RebinPointModelToBinnedEquation as RebinPointModelToBinnedEquation
+from RebinSameParameterDifferentParameter import RebinSameParameterDifferentParameter as RebinSameParameterDifferentParameter
 
 import pandas as pd
 
@@ -137,21 +141,33 @@ for key, value in final.items():
 
 
 
+bins_array=findInputBinsLminLmaxWminWmax()
+
+point_model_cards=findPointModelCardsLengthWidth()
+
+
+print(bins_array)
+print(point_model_cards)
+
+
+matchBinsPointCards=RebinMatchingBinsToPointModelCard(bins_array,point_model_cards)
+
+
+print(matchBinsPointCards)
+
+
+FinalBinningEquation=RebinPointModelToBinnedEquation(matchBinsPointCards)
+
+print(FinalBinningEquation)
+
+
+RebinSameParameterDifferentParameter(matchBinsPointCards,FinalBinningEquation)
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+# combine_modified_into_one will create final single point model cards
+# model cards are created upto this point
 
 '''
 
